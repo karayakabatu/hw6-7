@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,3 +86,92 @@
 </body>
 </html>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Name Input Screen -->
+        <div id="name-container" class="name-container">
+            <h1>Welcome to Quiz App!</h1>
+            <div class="name-input-section">
+                <label for="name-input">Please enter your name to begin:</label>
+                <input type="text" id="name-input" class="name-input" placeholder="Enter your name" autocomplete="name">
+                <p id="name-error" class="name-error hidden">Please enter your name to continue.</p>
+                <button id="start-quiz-btn" class="start-quiz-btn">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-container" class="quiz-container hidden">
+            <div class="header">
+                <h1>Quiz App</h1>
+                <div class="score">Score: <span id="score">0</span></div>
+            </div>
+            
+            <div class="progress">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <p>Question <span id="current-question">1</span> of <span id="total-questions">5</span></p>
+            </div>
+
+            <div class="question-section">
+                <h2 id="question-text">Loading question...</h2>
+            </div>
+
+            <div class="options-section">
+                <button class="option-btn" data-index="0">Option 1</button>
+                <button class="option-btn" data-index="1">Option 2</button>
+                <button class="option-btn" data-index="2">Option 3</button>
+                <button class="option-btn" data-index="3">Option 4</button>
+            </div>
+
+            <div class="action-section">
+                <button id="next-btn" class="next-btn" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-container" class="results-container hidden">
+            <h1>Quiz Complete!</h1>
+            <div class="results-content">
+                <div class="score-circle">
+                    <span id="final-score">0</span>
+                    <span class="score-label">out of</span>
+                    <span id="total-score">0</span>
+                </div>
+                <p id="result-message">Great job!</p>
+                
+                <div class="leaderboard-section">
+                    <h2>Top 5 Leaderboard</h2>
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <!-- Leaderboard entries will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <button id="restart-btn" class="restart-btn">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+>>>>>>> 64ed54a (Add Dockerfile and update README for dockerization)
